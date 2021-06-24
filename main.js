@@ -5,8 +5,14 @@ const FULL_HEART = '♥'
 // Your JavaScript code goes here!
 document.addEventListener("DOMContentLoaded", () =>{
   const hearts = document.getElementsByClassName("span.like-glyph")
-  console.log(hearts)
+ hearts.forEach(hearts.addEventListener("click",likeButton))
 })
+function likeButton(){
+  mimicServerCall() //fetch
+  .then(() => {
+    heart.innerHTML = FULL_HEART
+  })
+}
 
 
 //------------------------------------------------------------------------------
